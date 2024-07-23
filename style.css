@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#div_iniciar {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#a73737,
+            #7a2828);
+}
+
+#div_iniciar button {
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#div_iniciar button:hover {
+    padding: 30px;
+    background-color: rgb(175, 175, 175);
+}
+
+
+.tituloimg {
+    width: 650px;
+
+}
+
+
+
+
+#gameboard {
+    display: none;
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#eb8787, #ffede0);
+}
+
+
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds-animation 5s infinite linear;
+}
+
+#div_terminar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/acidente.png);
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background-position: center;
+}
+
+#div_terminar button {
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+#div_terminar button:hover {
+    padding: 30px;
+    background-color: rgb(175, 175, 175);
+}
+
+
+@keyframes pipe-animation {
+
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
